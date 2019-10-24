@@ -1,0 +1,230 @@
+body{
+    font-family: sans-serif, cursive, fantasy;
+    margin: 0;
+    height: auto;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+
+#landing
+{
+    background-color: azure;
+}
+
+
+h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+/*    to transfor text into uppercase */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+/*    to transfor text into capitalize */
+    text-transform: capitalize;
+    margin: 0;
+}
+h2{
+    color: darkblue;
+}
+
+#landing-text{
+    display:flex;
+/*    flex growth, shrink and 40 viewport width */
+    flex:0 1 40vw;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#landing-image{
+    background-image: url("../images/landingimage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+}
+
+.btn{
+    padding: 0.5rem 0.5rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    color: cadetblue;
+    background: white;
+    text-decoration: none;
+    transition: background 1000ms ease;   
+    font-weight: bold;
+}
+
+.btn:hover
+{
+    background-color:#BC6D5C;
+}
+
+.caption{
+    padding: 0.6rem;
+    text-align: center;
+}
+
+figcaption{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header{
+    background-color: grey;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+footer{
+        background-color: grey;
+        color: white;
+    padding: 5px;
+}
+
+.myform{
+    padding: 20px;
+}
+
+.myform label{
+    display: block;
+}
+
+.myform input[type="text"], .myform input[type="tel"], .myform textarea
+{
+    padding: 5px;
+    width: 90%;
+}
+
+.button{
+    background-color: chocolate;
+    color: white;
+    padding: 10px;
+    border: none;
+    
+}
+
+.clear{
+    clear: both;
+}
+
+
+#formdiv{
+    width: 75%;
+    float:left;   
+}
+
+#addressdiv
+{
+    margin-top: 40px;
+    width: 25%;
+    float: left;
+}
+
+.block
+{
+    width: 33.3%;
+    float: left;
+    display: inline-block;
+    height: 250px;
+    border: 1px solid #ccc;
+    padding: 10px;
+/*    to adjust the border with the size of the total block*/
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.fix{
+    position: fixed;
+    top: 300px;
+    margin-left: -120px;
+}
+
+/*to display news section as flexbox*/
+
+#blocks{
+    display: flex;
+    flex-direction: row;
+}
+            #block1{
+                flex: 2;
+                order:2;
+                background-color: lavender;
+                padding: 10px;
+            }           
+           #block2{
+                flex: 1;
+                order:3;
+                background-color: saddlebrown;
+                padding: 10px;
+                 color: whitesmoke;
+            }
+            #block3{
+                flex: 1;
+                order:1;
+                background-color: aqua;
+             padding: 10px;
+
+            }
+     
+
+
+
+/*only screen: The only keyword is used to prevent older browsers that do not support media queries with media features from applying the specified styles.*/
+
+/*  just to change the background with max screen is 600px or less... 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+or display: none;
+  }
+*/
+
+
+@media screen and (max-width: 768px)
+{
+    .block, #formdiv,#addressdiv {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+	
+    .fix{
+    position: fixed;
+    top: 40%;
+    margin-left: -60px;
+}
+/*    to adjust the flex boxes in a column when screen less than 768px. if you remove it flexboxes will explain in 1 row */
+      #blocks
+            {
+             display: flex;
+            flex-direction:column;
+            }
+}
